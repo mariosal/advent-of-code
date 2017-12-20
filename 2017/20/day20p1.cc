@@ -98,7 +98,7 @@ int main() {
     if (!dist_decreased && steady) {
       if (steady_time == -1) {
         steady_time = t;
-      } else if (t == particles.size() + steady_time) {
+      } else if (t == particles.size() * Dist(particles[min_i].a(), o) + steady_time) {
         printf("%d %zu\n", t, min_i);
         break;
       }
